@@ -12,6 +12,7 @@ export async function GET(request: NextRequest) {
   const { token } = registerResponse.data
   console.log(token)
   const redirectURL = new URL('/', request.url)
+  console.log(redirectURL)
   return NextResponse.redirect(redirectURL, {
     headers: {
       // segundos em 1 mês = 60x60x24x30
